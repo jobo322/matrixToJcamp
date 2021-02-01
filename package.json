@@ -1,0 +1,49 @@
+{
+  "name": "matrixToJcamp",
+  "version": "0.0.0",
+  "description": "generation of a jcamp file from a covariance matrix of nmr 1d spectra ",
+  "main": "lib/index.js",
+  "module": "src/index.js",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "eslint": "eslint src",
+    "eslint-fix": "npm run eslint -- --fix",
+    "prepublishOnly": "rollup -c",
+    "test": "npm run test-coverage && npm run eslint",
+    "test-coverage": "jest --coverage",
+    "test-only": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jobo322/matrixToJcamp.git"
+  },
+  "keywords": [],
+  "author": "jobo322",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jobo322/matrixToJcamp/issues"
+  },
+  "homepage": "https://github.com/jobo322/matrixToJcamp#readme",
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "all"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.12.1",
+    "@types/jest": "^26.0.20",
+    "eslint": "^7.19.0",
+    "eslint-config-cheminfo": "^5.2.2",
+    "jest": "^26.6.3",
+    "prettier": "^2.2.1",
+    "rollup": "^1.32.1"
+  }
+}
