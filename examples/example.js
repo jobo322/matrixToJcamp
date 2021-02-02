@@ -1,4 +1,4 @@
-import { matrixToJcamp } from './src/index';
+import { matrixToJcamp } from '../src/index';
 
 let data = [
   [1, 2, 3, 4],

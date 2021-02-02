@@ -42,8 +42,14 @@
     "@types/jest": "^26.0.20",
     "eslint": "^7.19.0",
     "eslint-config-cheminfo": "^5.2.2",
+    "esm": "^3.2.25",
     "jest": "^26.6.3",
     "prettier": "^2.2.1",
     "rollup": "^1.32.1"
+  },
+  "dependencies": {
+    "ml-matrix": "^6.6.0",
+    "spectra-data": "^3.4.11",
+    "spectra-processor": "^2.5.0"
   }
 }
