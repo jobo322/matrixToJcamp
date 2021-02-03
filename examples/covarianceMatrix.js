@@ -14,7 +14,7 @@ const normalizationOptions = {
 };
 
 const listFiles = readdirSync(resolve(pathToJcamps));
-console.log(listFiles);
+
 let spectraProcessor = new SpectraProcessor(normalizationOptions);
 
 for (let filename of listFiles) {

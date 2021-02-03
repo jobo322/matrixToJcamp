@@ -1,6 +1,7 @@
-import { NMR2D } from 'spectra-data';
 import { writeFileSync } from 'fs';
 import { join, resolve } from 'path';
+
+import { NMR2D } from 'spectra-data';
 
 /**
  * Generate a jcamp from a matrix
@@ -17,13 +18,16 @@ import { join, resolve } from 'path';
 export function matrixToJcamp(data, options = {}) {
   let { writeFile } = options;
   let spectrum = NMR2D.fromMatrix(data, options);
+  spectrum.ntuples = {
+    units: { x: 'PPM', y: 'PPM', z: 'intensity' },
+  };
+
   let jcamp = spectrum.toJcamp({ type: 'NTUPLES' });
 
   if (writeFile) {
-    let { path = './', name = 'jcamp.jdx' } = options;
-    writeFileSync(resolve(join(path, name)), jcamp);
+    let { path = './', filename = 'jcamp.jdx' } = options;
+    writeFileSync(resolve(join(path, filename)), jcamp);
   }
 
   return jcamp;
 }
-
